@@ -1,0 +1,438 @@
+/* typwriting effect */
+/* GLOBAL STYLES */
+body {
+  background: #333;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter p {
+  color: #777777;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+.typewriter {
+	display: inline-flex;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: pink }
+}
+/* end typewriter effect */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,
+b, u, i, center, ol, ul, li, article, header, nav,
+section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;}
+
+body {
+	line-height: 1;
+	-webkit-text-size-adjust: none;
+}
+/* Row */
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		align-items: stretch;
+	}
+
+/* Basic */
+
+	html {
+		box-sizing: border-box;
+	}
+
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+
+	body {
+		background-color: #f2d22e;
+		background-repeat: repeat, no-repeat;
+		background-size: auto, 100% 100%;
+		background-attachment: fixed;
+		overflow-y: scroll;
+	}
+
+
+	body, input, textarea, select {
+		font-family: 'DM Mono', monospace;
+		font-weight: 300;
+		color: #777777;
+		font-size: 20pt;
+		line-height: 1.75em;
+	}
+
+		@media screen and (max-width: 1680px) {
+
+			body, input, textarea, select {
+				font-size: 15pt;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			body, input, textarea, select {
+				font-size: 14pt;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			body, input, textarea, select {
+				font-size: 12pt;
+			}
+
+		}
+
+		@media screen and (max-width: 360px) {
+
+			body, input, textarea, select {
+				font-size: 11pt;
+			}
+
+		}
+
+	strong, b, h1, h2, h3, h4, h5, h6 {
+		font-weight: 400;
+		color: #363636;
+	}
+
+	h1 {
+		font-size: 2.4em;
+		letter-spacing: -0.015em;
+	}
+
+	h2 {
+		font-size: 1.8em;
+		letter-spacing: -0.015em;
+	}
+
+	h3 {
+		font-size: 1em;
+		letter-spacing: -0.015em;
+	}
+	h4, h5, h6{
+		font-size: 0.75em;
+	}
+
+	@media screen and (max-width: 736px) {
+
+		h1 {
+			font-size: 2.4em;
+		}
+
+		h2 {
+			font-size: 1.8em;
+		}
+
+		h3{
+			font-size: 1em;
+		}
+		h4, h5, h6{
+			font-size: .75em;
+		}
+
+	}
+
+	blockquote {
+		border-left: solid 0.5em #ddd;
+		padding: 1em 0 1em 2em;
+		font-style: italic;
+	}
+
+	em, i {
+		font-style: italic;
+	}
+
+	hr {
+		border: 0;
+		border-top: solid 1px #ddd;
+		padding: 1.5em 0 0 0;
+		margin: 1.75em 0 0 0;
+	}
+
+	sub {
+		position: relative;
+		top: 0.5em;
+		font-size: 0.8em;
+	}
+
+	sup {
+		position: relative;
+		top: -0.5em;
+		font-size: 0.8em;
+	}
+
+	br.clear {
+		clear: both;
+
+	}
+
+	p, ul, ol, dl, table, blockquote, form {
+		font-size: .7em;
+		margin-bottom: .1em;
+	}
+
+/
+
+/* Section/Article */
+
+	section, article {
+		margin-bottom: 3em;
+	}
+
+		section > :last-child, section:last-child, article > :last-child, article:last-child {
+			margin-bottom: 0;
+		}
+
+	header {
+		margin: 0 0 1.5em 0;
+	}
+
+		header > p {
+			margin: 0.5em 0 0 0;
+			color: #aaa;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			header {
+				margin: 0 0 1em 0;
+			}
+
+		}
+
+
+/* List */
+
+	ul {
+		list-style: circle;
+		padding-left: .5em;
+	}
+
+		ul li {
+			padding-left: 0.2em;
+		}
+
+	ol {
+		list-style: decimal;
+		padding-left: 1.25em;
+	}
+
+		ol li {
+			padding-left: 0.25em;
+		}
+
+/* Nav */
+	#nav {
+		text-align: left;
+		height: 4.75em;
+		cursor: default;
+		background-color: #1423f7;
+	}
+
+		#nav a {
+			position: relative;
+			display: inline-block;
+			color: #ffffff;
+			width: 1em;
+			height: 1em;
+			line-height: 0.9em;
+			font-size: 2.5em;
+			margin: 0.5em 0.25em 0.5em 0.25em;
+			opacity: 0.5;
+			outline: 0;
+			-moz-transition: opacity .25s ease-in-out;
+			-webkit-transition: opacity .25s ease-in-out;
+			-ms-transition: opacity .25s ease-in-out;
+			transition: opacity .25s ease-in-out;
+		}
+
+			#nav a span {
+				display: block;
+				position: absolute;
+				background: #222222;
+				color: #ffffff;
+				top: -2.75em;
+				font-size: 0.3em;
+				height: 2.25em;
+				line-height: 2.25em;
+				left: 50%;
+				opacity: 0;
+				-moz-transition: opacity .25s ease-in-out;
+				-webkit-transition: opacity .25s ease-in-out;
+				-ms-transition: opacity .25s ease-in-out;
+				transition: opacity .25s ease-in-out;
+				width: 5.5em;
+				margin-left: -2.75em;
+			}
+
+				#nav a span:after {
+					content: '';
+					display: block;
+					position: absolute;
+					bottom: -0.4em;
+					left: 50%;
+					margin-left: -0.6em;
+					border-top: solid 0.6em #222222;
+
+					border-left: solid 0.6em transparent;
+					border-right: solid 0.6em transparent;
+				}
+
+			#nav a:hover {
+				opacity: 1.0;
+			}
+
+
+			#nav a:active {
+				color: pink;
+				opacity: 1.0;
+			}
+
+/* Wrapper */
+	#wrapper {
+		width: 45em;
+		margin: 0 auto;
+		min-height: 100vh;
+		max-width: 100%;
+		padding: 4em 0;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		-moz-transition: opacity 1s ease-in-out;
+		-webkit-transition: opacity 1s ease-in-out;
+		-ms-transition: opacity 1s ease-in-out;
+		transition: opacity 1s ease-in-out;
+	}
+
+	#window{
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
+		-moz-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+		-webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+		-ms-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+		transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+		border: 3.5px solid #1423f7;
+  	border-radius: 25px;
+
+	}
+
+/* Main */
+	#main {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		background: #ffffff;
+		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
+		-moz-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+		-webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+		-ms-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+		transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+		border-top: 3.5px solid #1423f7;
+
+	}
+
+		#main > .panel {
+			margin-bottom: 0;
+			position: relative;
+			padding: 3.5em 2.5em 2.5em 2.5em;
+			width: 100%;
+		}
+
+		#main > .panel.intro {
+			padding: 10;
+			height: 20em;
+
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-align-items: center;
+			-webkit-align-items: center;
+			-ms-align-items: center;
+			align-items: center;
+		}
+
+		/* Footer */
+
+			#footer {
+				color: rgba(255, 255, 255, 0.45);
+				text-align: center;
+				padding: 2em 0 0 0;
+				font-size: 0.75em;
+			}
+
+				#footer a {
+					color: #ddd;
+					color: rgba(255, 255, 255, 0.65);
+					-moz-transition: color .25s ease-in-out;
+					-webkit-transition: color .25s ease-in-out;
+					-ms-transition: color .25s ease-in-out;
+					transition: color .25s ease-in-out;
+				}
+
+					#footer a:hover {
+						color: pink;
+					}
+
+				#footer .links {
+					list-style: none;
+					padding-left: 0;
+				}
+
+					#footer .links li {
+						display: inline-block;
+						padding-left: 1em;
+						margin-left: 1em;
+						border-left: solid 1px rgba(255, 255, 255, 0.25);
+						line-height: 1;
+					}
+
+						#footer .links li:first-child {
+							padding-left: 0;
+							margin-left: 0;
+							border-left: 0;
+						}
